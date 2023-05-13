@@ -1,15 +1,15 @@
-import Home from "./components/Home";
-import Header from "./components/Header";
+import React from "react";
 import ProductCard from "./components/ProductCard";
-
+import CartItem from "./components/Cart";
 import { Toaster } from "react-hot-toast";
-const index = () => {
+
+const cart = () => {
   return (
     <div>
-      <Home />
+      <CartItem />
       <Toaster />
     </div>
   );
 };
 
-export default index;
+export default cart;

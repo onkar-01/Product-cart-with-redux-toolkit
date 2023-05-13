@@ -1,0 +1,48 @@
+@import "color";
+
+.productCard {
+  background-color: $tertiary;
+  border-radius: 10px;
+  width: 300px;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s;
+  > img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  > p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    color: $primary;
+  }
+  > h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    color: $primary;
+  }
+  > button {
+    background-color: $secondary;
+    color: $tertiary;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  } 
+  &:hover {
+    transform: scale(1.05);
+  }
+}
