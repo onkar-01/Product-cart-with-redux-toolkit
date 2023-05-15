@@ -48,6 +48,8 @@ export const cartReducer = createReducer(
 
       state.shipping = state.subTotal > 100 ? 0 : 10;
 
+      state.shipping = state.subTotal === 0 ? 0 : 10;
+
       state.tax = Number((0.05 * state.subTotal).toFixed(2));
 
       state.total = Number(
@@ -71,6 +73,7 @@ export const cartReducer = createReducer(
       );
 
       state.shipping = state.subTotal > 100 ? 0 : 10;
+      state.shipping = state.subTotal === 0 ? 0 : 10;
 
       state.tax = Number((0.05 * state.subTotal).toFixed(2));
 
