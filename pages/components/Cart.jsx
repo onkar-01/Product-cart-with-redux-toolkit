@@ -2,6 +2,7 @@ import React from "react";
 import { AiFillDelete } from "react-icons/ai";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-hot-toast";
+import Image from "next/image";
 
 const Cart = () => {
   const { cartItems } = useSelector((state) => state.cart);
@@ -71,7 +72,13 @@ const CartItem = ({
   deletehandler,
 }) => (
   <div className="cartItem">
-    <img src={imgSrc} alt={name} />
+    <Image
+      loader={() => imgSrc}
+      src={imgSrc}
+      width={500}
+      height={500}
+      alt="Picture of the author"
+    />
     <article>
       <h4>{name}</h4>
       <h4>${price}</h4>
