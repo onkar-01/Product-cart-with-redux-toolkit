@@ -1,21 +1,21 @@
-// Purpose: header component for the website
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
-import { useEffect } from "react";
 import { FiShoppingBag } from "react-icons/fi";
-import { useSelector } from "react-redux";
 
-const header = () => {
-  const { cartItems } = useSelector((state) => state.cart);
+const Header = () => {
+  const cartItems = useSelector((state) => state.cart.cartItems);
 
   useEffect(() => {
-    cartItems;
-  });
+    // Perform any necessary side effects here
+  }, []);
+
   return (
     <nav>
       <h2>Logo here..</h2>
       <div>
-        <Link href={"/"}>Home</Link>
-        <Link href={"/cart"}>
+        <Link href="/">Home</Link>
+        <Link href="/cart">
           <FiShoppingBag size={24} />
           <p>{cartItems.length}</p>
         </Link>
@@ -24,4 +24,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
